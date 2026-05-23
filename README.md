@@ -2,6 +2,15 @@
 
 This repository contains a Terraform-based implementation for provisioning Microsoft Sentinel (Azure Sentinel) and deploying custom detection rules mapped to the MITRE ATT&CK framework. It demonstrates a complete "Detection-as-Code" (DaC) workflow.
 
+## Business Value for MSSPs
+
+For a Managed Security Service Provider (MSSP), standardizing deployments and threat detection is critical for scaling operations and maintaining high-quality security monitoring across multiple tenants. This project achieves key business objectives by:
+
+- **Standardized Deployments**: Utilizing Infrastructure as Code (Terraform) ensures that every new customer environment is provisioned identically. This reduces manual configuration errors, drastically cuts down onboarding time from days to minutes, and ensures compliance with internal baseline standards.
+- **Scalable Detection-as-Code (DaC)**: Managing detection rules as code allows MSSPs to deploy, update, and tune SIEM alerts centrally across a multi-tenant architecture. When a new threat emerges, detection logic can be updated in version control and pushed to all customer environments simultaneously.
+- **Improved Threat Coverage Mapping**: By explicitly mapping custom Kusto Query Language (KQL) queries to the MITRE ATT&CK framework, MSSPs can quantitatively demonstrate threat coverage to clients, identify blind spots, and align their monitoring capabilities with the latest threat intelligence.
+- **Repeatable & Auditable Operations**: Version-controlled environments guarantee an auditable history of what was deployed, who deployed it, and when detection rules were modified, significantly enhancing the operational maturity of the SOC.
+
 ## Overview
 
 Modern Security Operations Centers (SOCs) require scalable, repeatable, and version-controlled environments. By using Infrastructure as Code (IaC) to deploy the SIEM and Detection-as-Code for the alerting logic, this project ensures that security monitoring is reliable and explicitly aligned to known threat models.
