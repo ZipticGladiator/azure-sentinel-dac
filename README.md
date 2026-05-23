@@ -30,6 +30,11 @@ The included detection rules (`rules.tf`) are mapped to the MITRE ATT&CK framewo
 | **Multiple Failed Azure AD Logins** | Credential Access | T1110 (Brute Force) | Detects 5+ failed login attempts from a single user account indicating potential brute-force activity. |
 | **Suspicious PowerShell Encoded Command** | Execution, Defense Evasion | T1059, T1027 | Detects execution of `powershell.exe` with arguments indicative of obfuscated or encoded commands (`-EncodedCommand`, `-enc`, etc.). |
 | **MFA Denied by User** | Credential Access | T1110 (Brute Force) | Alerts when a legitimate user denies an MFA push notification, which often indicates a compromised primary password. |
+| **Impossible Travel Activity** | Initial Access | T1078 | Detects when the same user logs in from two geographically distant locations within an impossibly short timeframe. |
+| **Suspicious Inbox Forwarding Rule Created** | Collection | T1114 | Detects when a user creates an email rule that forwards emails containing financial keywords or moves them to deleted items. |
+| **New Global Administrator Role Assigned** | Privilege Escalation, Persistence | T1078, T1098 | Triggers a high-severity alert whenever a user is added to the Global Administrator or Privileged Role Administrator groups. |
+| **Mass File Deletion in SharePoint/OneDrive** | Impact | T1485 | Detects if a user deletes an unusually high volume of files from SharePoint or OneDrive within a short window. |
+| **Sign-in from Malicious IP or Tor Network** | Initial Access | T1190 | Identifies traffic originating from known Tor exit nodes or anonymous proxies. |
 
 ## Prerequisites
 
